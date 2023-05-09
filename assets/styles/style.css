@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+body {
+    height: 100vh;
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+   
+    display: flex;
+    flex-direction: column;
+  }
+
+h2 {
+    color: #277BC0;
+    text-align: center;
+}
+
+h3 {
+    color: #277BC0;
+}
+
+/*navigation header*/  
+header.navbar-container {
+    max-width: 1200px;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    padding-block: 0.5rem;
+    z-index: 999;
+  }
+   
+header.navbar-container .logo img {
+    width: 150px;
+  }
+   
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+  }
+   
+header.navbar-container .nav-list li {
+    list-style-type: none;
+  }
+   
+header.navbar-container .nav-list li a {
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #277BC0;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+  }
+   
+header.navbar-container .nav-list li:hover a {
+    background-color: #FFCB42;
+    color: #277BC0;
+  }
+/*end of navigation header*/
+
+/*beranda*/
+main .beranda{
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem 2rem;
+    flex: 1;
+    margin-inline: auto;
+    margin-top: 50px;
+    margin-bottom: 128px;
+   
+    display: flex;
+    align-items: center;
+  }
+
+main .beranda .beranda-description {
+    flex: 1 1;
+  }
+   
+main .beranda .beranda-description .title {
+    font-size: 3.5rem;
+    margin-block: 1rem;
+    color: #277BC0;
+  }
+   
+main .beranda .beranda-description p {
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+  }
+    
+main .beranda .beranda-image {
+    flex: 1;
+    display: flex;
+  }
+   
+main .beranda .beranda-image img {
+    margin: auto;
+    min-width: 250px;
+    width: 300px;
+  }
+/*end of beranda*/
+
+/*cerita main*/
+#cerita h1{
+    text-align: center;
+    margin-bottom: 60px;
+}
+#cerita p{
+    line-height: 2;
+}
+#cerita{
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.featured-image{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+/*end of cerita main*
+
+/*tempat main*/
+#tempat h1{
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 60px;
+}
+main .tempatsatu {
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem 2rem;
+    flex: 1;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-block: 0.5rem;
+    column-gap: 5rem; 
+  }
+
+main .tempatsatu .kotak{
+    height: 450px;
+    width: 300px;
+    background-color: #FFCB42;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 50px;
+}
+
+main .tempatsatu h3{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+main .tempatsatu h5{
+    text-align: center;
+    margin-top: 0px;
+    color: #5BC0F8;
+}
+
+main .tempatsatu p{
+    text-align: center;
+}
+
+main .tempatsatu img{
+    max-width: 250px;
+    margin: auto;
+    align-items: auto;
+    border-radius: 10px;
+}
+/*end of tempat main*/
+
+/*profil biodata*/
+aside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.profile-card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.profile-card img{
+    width: 200px;
+  
+}
+  /*footer*/
+  footer {
+    padding: 20px;
+    color: white;
+    background-color: #277BC0;
+    text-align: center;
+    font-weight: bold;
+}
+
+  /* Medium devices (landscape tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+    header.navbar-container{
+        flex-direction: column;
+    }
+    header.navbar-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+      }
+    main{
+        margin: 5vw;
+    }
+    main .beranda{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    main .beranda .beranda-image{
+        order: -1;
+    }
+
+    main .tempatsatu{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    main .tempatsatu .kotak h3{
+        margin-top: 5px;
+    }
+
+    .opentripsatu{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
